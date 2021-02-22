@@ -1,0 +1,22 @@
+
+  Expo CLI 4.1.6 environment info:
+    System:
+      OS: macOS 10.15.7
+      Shell: 5.7.1 - /bin/zsh
+    Binaries:
+      Node: 14.15.0 - ~/.nvm/versions/node/v14.15.0/bin/node
+      Yarn: 1.22.10 - /usr/local/bin/yarn
+      npm: 7.5.4 - ~/.nvm/versions/node/v14.15.0/bin/npm
+      Watchman: 4.9.0 - /usr/local/bin/watchman
+    Managers:
+      CocoaPods: 1.10.0 - /usr/local/bin/pod
+    SDKs:
+      iOS SDK:
+        Platforms: iOS 14.4, DriverKit 20.2, macOS 11.1, tvOS 14.3, watchOS 7.2
+    IDEs:
+      Android Studio: 3.5 AI-191.8026.42.35.6010548
+      Xcode: 12.4/12D4e - /usr/bin/xcodebuild
+    npmGlobalPackages:
+      expo-cli: 4.1.6
+    Expo Workflow: managed
+
