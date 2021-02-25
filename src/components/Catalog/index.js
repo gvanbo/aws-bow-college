@@ -3,6 +3,8 @@ import { RefreshControl } from 'react-native';
 import { useSelector, useDispatch } from 'react-redux';
 import {
     Text,
+    Header,
+    Icon,
     Container,
     Content,
     Button,
@@ -20,17 +22,32 @@ import styles from './styles';
 
 function Catalog(props) {
 
+    React.useLayoutEffect(() => {
+        props.navigation.setOptions({
+            headerRight: () => (
+                <Button transparent onPress={fetchProducts}>
+                    <Icon name='refresh' />
+                </Button>
+            )
+        });
+    }, [props.navigation]);
+
     const [loading, setLoading] = useState(false);
     const [products, setProducts] = useState([]);
     const order = useSelector(state => state.order);
     const dispatch = useDispatch();
 
     useEffect(() => {
-        fetchProducts();
+        setTimeout(
+            fetchProducts,
+            1000
+        );
     }, []);
 
     async function fetchProducts() {
+        console.log('Fetching products');
         const data = await DataStore.query(Product);
+        console.log(data);
         setProducts(data);
     };
 
@@ -44,7 +61,7 @@ function Catalog(props) {
     
     const productList = products.map(product => (
         <ListItem thumbnail key={product.id}>
-            <Left>
+            <Left style={{ flex: 'auto' }}>
                 <Thumbnail square source={{ uri: product.image }} />
             </Left>
             <Body>
