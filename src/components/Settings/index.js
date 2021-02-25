@@ -6,12 +6,22 @@ import {
     Toast,
     Button,
 } from 'native-base';
+import { Auth } from 'aws-amplify';
 import { DataStore } from "@aws-amplify/datastore";
 import styles from './styles';
 import loadProducts from '../../scripts/loadProducts';
 
 const Settings = (props) => {
-    
+
+    async function signOut() {
+        await DataStore.clear();
+        try {
+            await Auth.signOut({ global: true });
+        } catch (error) {
+            console.log('error signing out: ', error);
+        }
+    }
+
     async function createProducts() {
         try {
             await loadProducts();
@@ -43,6 +53,9 @@ const Settings = (props) => {
     return (
         <Container>
             <Content>
+            <Button block info style={styles.settingsBtn} onPress={signOut}>
+                    <Text>Sign Out</Text>
+                </Button>
                 <Button block info style={styles.settingsBtn} onPress={createProducts}>
                     <Text>Create dummy products</Text>
                 </Button>
