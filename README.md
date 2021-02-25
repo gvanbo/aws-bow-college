@@ -47,21 +47,21 @@ To build your application you will complete the following steps:
 
 ### 2. Enable User Authentication with the Amplify Admin UI
 
-1. Click the **Authentication** link under the *Set up* menu
-2. Leave the defaults as is
-3. Click the **Save and deploy** button
-4. Click the **Confirm deployment** button
+1. Click the **Open admin UI** button under the *staging* environment 
+2. Click the **Authentication** link under the *Set up* menu
+3. Leave the defaults as is
+4. Click the **Save and deploy** button
+5. Click the **Confirm deployment** button
 
 ### 3. Create Your Application's Data Model with the Amplify Admin UI
 
-1. Click the **Open admin UI** button under the *staging* environment 
-2. Click the **Data** link under the *Set up* menu
+1. Click the **Data** link under the *Set up* menu
 
 #### Add a Product model
 
-3. Click the **Add** dropdown and select the **Add model** option
-4. Set the model title to `Product`
-5. Add the following field names/types:
+2. Click the **Add** dropdown and select the **Add model** option
+3. Set the model title to `Product`
+4. Add the following field names/types:
     - `sku` | `String`
     - `name` | `String`
     - `price` | `Float`
@@ -69,36 +69,36 @@ To build your application you will complete the following steps:
 
 #### Add a LineItem model
 
-6. Click the **Add** dropdown and select the **Add model** option
-7. Set the model title to `LineItem`
-8. Add the following field names/types:
+5. Click the **Add** dropdown and select the **Add model** option
+6. Set the model title to `LineItem`
+7. Add the following field names/types:
     - `qty` | `Int`
     - `description` | `String`
     - `price` | `Float`
     - `total` | `Float`
-9. Add the following relationship:
+8. Add the following relationship:
     - Related Model: `Product`
     - Model relationships: `One LineItem to one...`
     - Relationship name: `product`
 
 #### Add an Order model
 
-10. Click the **Add** dropdown and select the **Add model** option
-11. Set the model title to `Order`
-12. Add the following field names/types:
+9. Click the **Add** dropdown and select the **Add model** option
+10. Set the model title to `Order`
+11. Add the following field names/types:
     - `total` | `Float`
     - `subtotal` | `Float`
     - `tax` | `Float`
     - `createdAt` | `String`
-13. Add the following relationship:
+12. Add the following relationship:
     - Related Model: `LineItem`
     - Model relationships: `One Order to many...`
     - Relationship name: `lineItems`
 
 #### Deploy your data model
 
-14. Click the **Save and deploy** button
-15. Click the **Deploy** button
+13. Click the **Save and deploy** button
+14. Click the **Deploy** button
 
 ### 4. Create A Product with the Amplify Admin UI
 
