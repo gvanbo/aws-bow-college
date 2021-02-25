@@ -116,7 +116,9 @@ To build your application you will complete the following steps:
 5. In the *Owners can...* panel check only **Create** and **Read**
 6. Click the *LineItem* model and in the right panel open the *Add a new rule for...* dropdown and select the **Owners** option
 7. In the *Owners can...* panel check only **Create** and **Read**
-8. Click the *Product* model and in the right panel open the *Add a new rule for...* dropdown and select the **Any signed-in Users** option
+6. Click the *Product* model and in the right panel open the *Add a new rule for...* dropdown and select the **Owners** option
+7. In the *Owners can...* panel check only **Create**, **Read**, **Update**, and **Delete**
+8. Open the *Add a new rule for...* dropdown and select the **Any signed-in Users** option
 9. In the *Any signed-in users...* panel check only **Read**
 
 #### Deploy your data model
