@@ -38,10 +38,7 @@ function Catalog(props) {
     const dispatch = useDispatch();
 
     useEffect(() => {
-        setTimeout(
-            fetchProducts,
-            1000
-        );
+        fetchProducts();
     }, []);
 
     async function fetchProducts() {
