@@ -1,4 +1,4 @@
-# amplify-point-of-sale
+# aws-bow-college
 
 ### Note: This is not production code and simply meant as a demo
 
