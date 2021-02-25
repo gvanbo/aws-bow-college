@@ -116,8 +116,8 @@ To build your application you will complete the following steps:
 
 1. Clone this repo to your local machine
 ```console
-git clone https://github.com/mikeapted/amplify-point-of-sale
-cd amplify-point-of-sale
+git clone https://github.com/mikeapted/aws-bow-college
+cd aws-bow-college
 ```
 2. Install the dependencies
 ```console
