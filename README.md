@@ -39,8 +39,8 @@ To build your application you will complete the following steps:
 ### 1. Create Your Application Backend with the Amplify Console
 
 1. Login to your AWS account's [management console](https://aws.amazon.com/console/)
-2. Navigate to the Amplify Admin using the search box at the top
-3. Create your application backend
+2. Navigate to the AWS Amplify service using the search box at the top
+3. Create your application backend:
     * If you do not have any existing Amplify apps click the **Get Started Button**, and then the **Get Started** button under the *Create an app backend*
     * If you have other Amplify Apps click the **New App** button at the top right, and then **Create app backend**
 4. Enter a name (i.e. `My Application`) and then select **Confirm deployment**
@@ -92,6 +92,7 @@ To build your application you will complete the following steps:
 #### Deploy your data model
 
 14. Click the **Save and deploy** button at the top right of that pane
+15. Click the **Deploy** button
 
 ### 3. Enable User Authentication with the Amplify Admin UI
 
@@ -102,7 +103,7 @@ To build your application you will complete the following steps:
 
 ### 4. Update Data Model Authorization with the Amplify Admin UI
 
-1. Click the **Authentication** link under the *Set up* menu
+1. Click the **Data** link under the *Set up* menu
 
 #### Update the backend to use our user authentication
 
@@ -111,11 +112,11 @@ To build your application you will complete the following steps:
 
 #### Update our models to protect users data
 
-4. Click the *Order* model and in the right panel open the *Add a new rule for...* dropdown and select the **Owner** option
+4. Click the *Order* model and in the right panel open the *Add a new rule for...* dropdown and select the **Owners** option
 5. In the *Owners can...* panel check only **Create** and **Read**
-6. Click the *LineItem* model and in the right panel open the *Add a new rule for...* dropdown and select the **Owner** option
+6. Click the *LineItem* model and in the right panel open the *Add a new rule for...* dropdown and select the **Owners** option
 7. In the *Owners can...* panel check only **Create** and **Read**
-8. Click the *Product* model and in the right panel open the *Add a new rule for...* dropdown and select the **Any signed-in users** option
+8. Click the *Product* model and in the right panel open the *Add a new rule for...* dropdown and select the **Any signed-in Users** option
 9. In the *Any signed-in users...* panel check only **Read**
 
 #### Deploy your data model
@@ -126,6 +127,14 @@ To build your application you will complete the following steps:
 ### 5. Create A Product with the Amplify Admin UI
 
 1. Click the **Content** link under the *Manage* menu
+2. From the *Select table* dropdown select **Product**
+3. Click the **Create Product** button
+4. Add the following field names/types:
+    - `sku` | `abc123`
+    - `name` | `My Product`
+    - `price` | `10.99`
+    - `image` | `https://aws-appsync-refarch-offline-assets.s3-us-west-2.amazonaws.com/Cookie%402x.png`
+5. Click **Save Product**
 
 ### 6. Clone Our Sample Application
 
@@ -141,13 +150,18 @@ npm install
 
 ### 7. Pull Our Amplify Configuration Into Our Application
 
-1. In the Amplify Admin UI click the *Local setup instructions* link at the top right
-2. Copy the command to pull the latest into your source code
-3. Run that command locally
+1. Install the latest Amplify CLI
+```console
+curl -sL https://aws-amplify.github.io/amplify-cli/install | bash && $SHELL
+```
+2. In the Amplify Admin UI click the *Local setup instructions* link at the top right
+3. Copy the command to pull the latest into your source code
+4. Run that command locally
 ```console
 amplify pull --appId <YOUR_APP_ID> --envName staging
 ```
-4. Follow the authentication flow in your browser
+5. Follow the authentication flow in your browser
+6. Accept all the defaults in the Amplify config process
 
 ### 8. Demo Our Application
 
