@@ -28,8 +28,8 @@ Note: If you are running into issues, look over the [expo-diag.txt](expo-diag.tx
 To build your application you will complete the following steps:
 
 1. [Create Your Application Backend with the Amplify Console](#1-create-your-application-backend-with-the-amplify-console)
-2. [Create Your Application's Data Model with the Amplify Admin UI](#2-create-your-applications-data-model-with-the-amplify-admin-ui)
-3. [Enable User Authentication with the Amplify Admin UI](#3-enable-user-authentication-with-the-amplify-admin-ui)
+2. [Enable User Authentication with the Amplify Admin UI](#2-enable-user-authentication-with-the-amplify-admin-ui)
+3. [Create Your Application's Data Model with the Amplify Admin UI](#3-create-your-applications-data-model-with-the-amplify-admin-ui)
 4. [Update Data Model Authorization with the Amplify Admin UI](#4-update-data-model-authorization-with-the-amplify-admin-ui)
 5. [Create A Product with the Amplify Admin UI](#5-create-a-product-with-the-amplify-admin-ui)
 6. [Clone Our Sample Application](#6-clone-our-sample-application)
@@ -46,7 +46,14 @@ To build your application you will complete the following steps:
 4. Enter a name (i.e. `My Application`) and then select **Confirm deployment**
 5. Your application will take several minutes to deploy, and then you will redirected to the App Settings page
 
-### 2. Create Your Application's Data Model with the Amplify Admin UI
+### 2. Enable User Authentication with the Amplify Admin UI
+
+1. Click the **Authentication** link under the *Set up* menu
+2. Leave the defaults as is
+3. Click the **Save and deploy** button
+4. Click the **Confirm deployment** button
+
+### 3. Create Your Application's Data Model with the Amplify Admin UI
 
 1. Click the **Open admin UI** button under the *staging* environment 
 2. Click the **Data** link under the *Set up* menu
@@ -89,42 +96,28 @@ To build your application you will complete the following steps:
     - Model relationships: `One Order to many...`
     - Relationship name: `lineItems`
 
-#### Deploy your data model
-
-14. Click the **Save and deploy** button at the top right of that pane
-15. Click the **Deploy** button
-
-### 3. Enable User Authentication with the Amplify Admin UI
-
-1. Click the **Data** link under the *Set up* menu
-2. Leave the defaults as is
-3. Click the **Save and deploy** button
-4. Click the **Confirm deployment** button
-
 ### 4. Update Data Model Authorization with the Amplify Admin UI
-
-1. Click the **Data** link under the *Set up* menu
 
 #### Update the backend to use our user authentication
 
-2. Click the **Authorization mode** dropdown and select the **Cognito user pool** option
-3. Enter `Change` and click the **Change authorization mode** button
+1. Click the **Authorization mode** dropdown and select the **Cognito user pool** option
+2. Enter `Change` and click the **Change authorization mode** button
 
 #### Update our models to protect users data
 
-4. Click the *Order* model and in the right panel open the *Add a new rule for...* dropdown and select the **Owners** option
-5. In the *Owners can...* panel check only **Create** and **Read**
-6. Click the *LineItem* model and in the right panel open the *Add a new rule for...* dropdown and select the **Owners** option
-7. In the *Owners can...* panel check only **Create** and **Read**
-6. Click the *Product* model and in the right panel open the *Add a new rule for...* dropdown and select the **Owners** option
-7. In the *Owners can...* panel check only **Create**, **Read**, **Update**, and **Delete**
-8. Open the *Add a new rule for...* dropdown and select the **Any signed-in Users** option
-9. In the *Any signed-in users...* panel check only **Read**
+3. Click the *Order* model and in the right panel open the *Add a new rule for...* dropdown and select the **Owners** option
+4. In the *Owners can...* panel check only **Create** and **Read**
+5. Click the *LineItem* model and in the right panel open the *Add a new rule for...* dropdown and select the **Owners** option
+6. In the *Owners can...* panel check only **Create** and **Read**
+7. Click the *Product* model and in the right panel open the *Add a new rule for...* dropdown and select the **Owners** option
+8. In the *Owners can...* panel check only **Create**, **Read**, **Update**, and **Delete**
+9. Open the *Add a new rule for...* dropdown and select the **Any signed-in Users** option
+10. In the *Any signed-in users...* panel check only **Read**
 
 #### Deploy your data model
 
-4. Click the **Save and deploy** button
-5. Click the **Deploy** button
+11. Click the **Save and deploy** button
+12. Click the **Deploy** button
 
 ### 5. Create A Product with the Amplify Admin UI
 
